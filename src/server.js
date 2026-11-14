@@ -5,16 +5,16 @@ import movieRoutes from "./routes/movieRoutes.js";
 
 const app = express();
 
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hello World!" });
-});
+// API routes
+app.use("/movies", movieRoutes);
+
 
 const PORT = 2500;
-const server = app.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-//GET, POST, PUT, DELETE routes will be defined here
+//GET, POST, PUT, DELETE 
 // http://localhost:2500/
 
 //ENDPOINTS
