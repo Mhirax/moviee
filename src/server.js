@@ -1,5 +1,8 @@
 import express from "express";
 
+//Import routes
+import movieRoutes from "./routes/movieRoutes.js";
+
 const app = express();
 
 app.get("/hello", (req, res) => {
